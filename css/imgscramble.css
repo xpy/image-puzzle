@@ -1,0 +1,83 @@
+
+body:after { content: ''; position: relative; top: 0; left: 0; width: 0; height: 100%; display: inline-block; vertical-align: middle;}
+#wrapper { display: inline-block; position: relative; overflow: hidden;
+width: auto; height: auto; vertical-align: middle;}
+#taker:not(:empty){
+    width: 600px;
+    height: 600px;
+    position: relative;
+    left:  -1000%;
+}
+#taker:not(:empty) img {
+    object-fit: contain;
+    width: 100%;
+}
+#taker:empty {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #bbb;
+	border: 1px dashed #666;
+	color: #333;
+	text-shadow: 0 1px 0 #fafafa;
+	font-size: 20px;
+	border-radius: 3px;
+	margin: auto;
+}/*
+#taker:empty:before{
+	display : inline-block;
+	vertical-align : middle;
+	content: "Drag an image in here...";
+	pointer-events:none;
+}
+#taker:empty:after{
+	display : inline-block;
+	vertical-align : middle;
+	width : 0; height : 100%;
+	content: '';
+	pointer-events:none;
+}*/
+#taker:empty + #puzzle { display:none;}
+#taker:not(:empty) + #puzzle {
+    background: -moz-element(#taker) center center fixed no-repeat;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: block;
+}
+#taker:empty ~ .info {
+	margin: 20px auto;
+	width : 500px;
+	font-size: 14px;
+}
+#taker:not(:empty) ~ .info {
+	display:  none;
+}
+
+/*#wrapper{ box-shadow: 0 0 4px rgba(0,0,0,.8)}*/
+
+table>tbody { width: 100%; height: 100%;}
+table>tr>td { width: 100%; height: 100%;}
+tr { width: 100%; height: 100%;}
+
+input[type='radio'] { display : none; }
+
+/*
+#taker:before {
+    content: "Drag An Image In Here...";
+    position: absolute;
+    margin: auto;
+    top: -50px; right: 0; bottom: 0; left: 0;
+    width: 100px;
+    height: 60px;
+    padding:40px 50px 50px 50px;
+    font-size: 20px;
+    border-radius: 3px;
+    border: 1px dashed #999;
+    cursor: default;
+    pointer-events:none;
+
+}
+*/
