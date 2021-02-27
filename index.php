@@ -3,14 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>Image Scramble</title>
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,400italic,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="css/reset.css" rel="stylesheet" type="text/css">
 	<link href="css/imgscramble.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript">
 
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-28367526-1']);
-		_gaq.push(['_setDomainName', 'xpy.gr']);
+		_gaq.push(['_setDomainName', 'xpy.github.io']);
 		_gaq.push(['_trackPageview']);
 
 		(function () {
@@ -21,10 +21,8 @@
 			var s = document.getElementsByTagName('script')[0];
 			s.parentNode.insertBefore(ga, s);
 		})();
-
 	</script>
 </head>
-
 <body>
 <?
 
@@ -76,9 +74,7 @@ for ($i = 0; $i < $hor; $i++) {
 
                 for ($j = 0; $j < $hor; $j++) {
                     $randomRotate = rand(0, 3)*90;
-					// $randomRotate = 0;
 					$bgPos= [(100 + ($i*11))%100,(100 + ($j*11))%100]
-					/* transform:rotate(<?=$randomRotate?>deg); */
                     ?>
 				<div class="SQUARE" id="square_<?=$i;?>_<?=$j;?>" style="transform:rotate(<?=$randomRotate?>deg); background-position:<?= $bgPos[1].'% '.$bgPos[0].'%;' ?>"><?
                     for ($l = 0; $l < 4; $l++) { ?>
@@ -86,14 +82,12 @@ for ($i = 0; $i < $hor; $i++) {
                         <? } ?>
 				</div>
                     <?
-
                 }
             }
-
             ?></tbody>
 		</table>
 	</div>
-	<div class="info">Drag an image into the box...<br>( images bigger than 900x900 get pretty slow... )</div>
+	<div class="info">Drag an image into the box...</div>
 </div>
 </body>
 </html>
